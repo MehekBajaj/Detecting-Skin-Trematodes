@@ -29,9 +29,9 @@ RED = wavy
 Gray = non-wavy
 
 ## Default behavior parameters
-| Parameter | Default |
+| Parameter | Default | What it controls
 |---|---:|
-| Clustering distance | 70 px |
+| Clustering distance | 70 px | 
 | Maximum frame gap | 3 frames |
 | Minimum segment length | 15 frames |
 | Smoothing window | 9 frames |
