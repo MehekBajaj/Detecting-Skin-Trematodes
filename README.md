@@ -29,14 +29,14 @@ RED = wavy
 Gray = non-wavy
 
 ## Default behavior parameters
-| Parameter | Default | What it controls
-|---|---:|
-| Clustering distance | 70 px | 
-| Maximum frame gap | 3 frames |
-| Minimum segment length | 15 frames |
-| Smoothing window | 9 frames |
-| Curvature threshold | 0.004 |
-| Minimum step | 3 px/frame |
-| History window | 30 frames |
-| Minimum direction flips | 2 |
-| Minimum object length | 10 judged frames |
+| Parameter | Default | What it means |
+|---|---:|---|
+| Clustering distance | 70 px | Distance used to connect neighboring tracking points into object clusters. Larger values can merge nearby groups; smaller values can separate them. |
+| Maximum frame gap | 3 frames | Largest allowed difference between successive observed frame numbers within one segment. A value of 3 allows up to two missing frames to be interpolated. Larger gaps split the trajectory. |
+| Minimum segment length | 15 frames | Minimum trajectory length needed for behavior analysis, including interpolated frames. Increasing this excludes shorter segments. |
+| Smoothing window | 9 frames | Number of frames used to estimate curvature with smoothing. Larger windows can reduce jitter but smooth away brief bends. Must be odd, at least 5, and no larger than the minimum segment length. |
+| Curvature threshold | 0.004 | Curvature magnitude a bend must exceed to count as a left or right bend. Lower values include gentler bends; higher values ignore them. |
+| Minimum step | 3 px/frame | Minimum smoothed movement per frame needed to retain curvature. Below this value, curvature is set to zero. Increasing it suppresses more slow or nearly stationary movement. |
+| History window | 30 frames | Number of recent frames used to count bending-direction changes, including the current frame. Larger windows retain earlier changes for longer. |
+| Minimum direction flips | 2 | Minimum median flip count across an object's assessed tracking points required to label that object-frame wavy. Higher values require more repeated changes in bending direction. |
+| Minimum object length | 10 judged frames | Minimum number of assessed frames required for an object to appear in the summary and timeline. These frames do not need to be consecutive or wavy. |
