@@ -22,3 +22,21 @@ Skin_Trematodes_Detection.ipynb has a browser interface for video tracking, move
 6. Open Behavior analysis, adjust parameters if needed, and select Analyze behavior.
 
 Keep the final cell running while using the dashboard. The Gradio Link is temporary. Github hosts the notebook; the application runs during the session.
+
+# Behavior parameters
+Wavy labels are determined from recent signed-curvature direction changes. Speed and Acceleration measurements do not determine the labels.
+RED = wavy
+Gray = non-wavy
+
+## Default behavior parameters
+| Parameter | Default |
+|---|---:|
+| Clustering distance | 70 px |
+| Maximum frame gap | 3 frames |
+| Minimum segment length | 15 frames |
+| Smoothing window | 9 frames |
+| Curvature threshold | 0.004 |
+| Minimum step | 3 px/frame |
+| History window | 30 frames |
+| Minimum direction flips | 2 |
+| Minimum object length | 10 judged frames |
