@@ -40,3 +40,8 @@ Gray = non-wavy
 | History window | 30 frames | Number of recent frames used to count bending-direction changes, including the current frame. Larger windows retain earlier changes for longer. |
 | Minimum direction flips | 2 | Minimum median flip count across an object's assessed tracking points required to label that object-frame wavy. Higher values require more repeated changes in bending direction. |
 | Minimum object length | 10 judged frames | Minimum number of assessed frames required for an object to appear in the summary and timeline. These frames do not need to be consecutive or wavy. |
+
+Further Explanation:
+Maximum frame gap = 3 : observations at frames 10 and 13 stay in the same segment, and frames 11-12 are interpolated. Observation at frame 10 and 14 start separate segment. This prevents the analysis from interpreting a continuous path across long periods without observation.
+Direction flips: left -> right -> left contains two direction flips. For example, for left -> right flip, it does not count as a wavy behavior.
+Minimum Object Length: Short segment are not assessed, rather than classify as non wavy.
