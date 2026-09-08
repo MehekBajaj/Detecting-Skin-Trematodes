@@ -58,3 +58,21 @@ Minimum Object Length: Short segment are not assessed, rather than classify as n
 | `movement_tracks.mp4` | Annotated video with tracks and trails |
 | `movement_metrics.csv` | Complete per-frame tracking measurements |
 | `behavior_results.zip` | Behavior CSVs, plots, and the parameter values used |
+
+
+## Acknowledgements
+This system build on [SegAnyMo — Segment Any Motion in Videos](https://github.com/nnanhuang/SegAnyMo).
+### How we use SegAnyMo
+The notebook runs SegAnymo's preprocessing and pre-trained inference pipeline on the selected video clip:
+1. BootsTAPIR tracks points across frames, while Depth Anything V2 estimates depth and DINOv2 extracts image features.
+2. SegAnyMo uses these inputs to identify moving point trajectories.
+3. The application reads the resulting trajectories, visibility values, and confidence values to create tracking videos and movement measurements.
+
+### reference
+
+Nan Huang, Wenzhao Zheng, Chenfeng Xu, Kurt Keutzer, Shanghang Zhang, Angjoo Kanazawa, and Qianqian Wang. **Segment Any Motion in Videos.** CVPR, 2025, pp. 3406–3416.
+
+[Paper](https://arxiv.org/abs/2503.22268) · [Project page](https://motion-seg.github.io/) · [Code and BibTeX citation](https://github.com/nnanhuang/SegAnyMo#citation)
+
+
+
