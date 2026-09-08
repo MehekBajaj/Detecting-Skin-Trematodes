@@ -37,13 +37,15 @@ Gray = non-wavy
 | Smoothing window | 9 frames | Number of frames used to estimate curvature with smoothing. Larger windows can reduce jitter but smooth away brief bends. Must be odd, at least 5, and no larger than the minimum segment length. |
 | Curvature threshold | 0.004 | Curvature magnitude a bend must exceed to count as a left or right bend. Lower values include gentler bends; higher values ignore them. |
 | Minimum step | 3 px/frame | Minimum smoothed movement per frame needed to retain curvature. Below this value, curvature is set to zero. Increasing it suppresses more slow or nearly stationary movement. |
-| History window | 30 frames | Number of recent frames used to count bending-direction changes, including the current frame. Larger windows retain earlier changes for longer. |
+| History window | 30 frames | Number of recent frames used to judge movement, including the current frame.|
 | Minimum direction flips | 2 | Minimum median flip count across an object's assessed tracking points required to label that object-frame wavy. Higher values require more repeated changes in bending direction. |
 | Minimum object length | 10 judged frames | Minimum number of assessed frames required for an object to appear in the summary and timeline. These frames do not need to be consecutive or wavy. |
 
 ### Further Explanation:
 
 Maximum frame gap = 3 : observations at frames 10 and 13 stay in the same segment, and frames 11-12 are interpolated. Observation at frame 10 and 14 start separate segment. This prevents the analysis from interpreting a continuous path across long periods without observation.
+
+Minimum Step: Used to ignore tracked movements that appears to be still.
 
 Direction flips: left -> right -> left contains two direction flips. For example, for left -> right flip, it does not count as a wavy behavior.
 
