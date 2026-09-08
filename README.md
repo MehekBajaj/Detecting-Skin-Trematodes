@@ -2,7 +2,7 @@
 
 Skin_Trematodes_Detection.ipynb has a browser interface for video tracking, movement metrics, and configureable wavy behavior analysis. Run the included notebook in Google Colab to launch the dashboard.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MehekBajaj/Detecting-Skin-Trematodes/blob/main/Skin_Trematodes_Detection.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/MehekBajaj/Detecting-Skin-Trematodes/blob/main/Skin-Trematodes-Detection-with-risk.ipynb)
 
 # Features
 - Select a video clip, processing resolution, and track filters.
