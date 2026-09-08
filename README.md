@@ -50,3 +50,11 @@ Minimum Step: Used to ignore tracked movements that appears to be still.
 Direction flips: left -> right -> left contains two direction flips. For example, for left -> right flip, it does not count as a wavy behavior.
 
 Minimum Object Length: Short segment are not assessed, rather than classify as non wavy.
+
+## Downloads
+| File | Contents |
+| --- | --- |
+| `movement_comparison.mp4` | Synchronized source and tracked views |
+| `movement_tracks.mp4` | Annotated video with tracks and trails |
+| `movement_metrics.csv` | Complete per-frame tracking measurements |
+| `behavior_results.zip` | Behavior CSVs, plots, and the parameter values used |
