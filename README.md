@@ -31,8 +31,7 @@ Gray = non-wavy
 ## Default behavior parameters
 | Parameter | Default | What it means |
 |---|---:|---|
-| Clustering distance | 70 px | Distance used to connect neighboring tracking points into object clusters. 
-Larger values can merge nearby groups; smaller values can separate them. |
+| Clustering distance | 70 px | Distance used to connect neighboring tracking points into object clusters. Larger values can merge nearby groups; smaller values can separate them. |
 | Maximum frame gap | 3 frames | Largest allowed difference between successive observed frame numbers within one segment. A value of 3 allows up to two missing frames to be interpolated. Larger gaps split the trajectory. |
 | Minimum segment length | 15 frames | Minimum trajectory length needed for behavior analysis, including interpolated frames. Increasing this excludes shorter segments. |
 | Smoothing window | 9 frames | Number of frames used to estimate curvature with smoothing. Larger windows can reduce jitter but smooth away brief bends. Must be odd, at least 5, and no larger than the minimum segment length. |
